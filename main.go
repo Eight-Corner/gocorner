@@ -1,17 +1,11 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
-func lenAndUpper(name string) (int, string) {
-	return len(name), strings.ToUpper(name)
+func repeatMe(words ...string) {
+	fmt.Println(words)
 }
 
 func main() {
-	// totalLength, upperName := lenAndUpper("corner")
-	// fmt.Println(totalLength, upperName)
-	totalLength, _ := lenAndUpper("corner")
-	fmt.Println(totalLength)
+	repeatMe("corner", "developer", "moon", "suwon")
 }
