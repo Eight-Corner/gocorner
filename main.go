@@ -1,11 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func multiply(a int, b int) int {
-	return a * b
+func lenAndUpper(name string) (int, string) {
+	return len(name), strings.ToUpper(name)
 }
 
 func main() {
-	fmt.Println(multiply(10, 2))
+	// totalLength, upperName := lenAndUpper("corner")
+	// fmt.Println(totalLength, upperName)
+	totalLength, _ := lenAndUpper("corner")
+	fmt.Println(totalLength)
 }
