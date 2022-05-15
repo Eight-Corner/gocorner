@@ -1,11 +1,11 @@
 package main
 
-import (
-	"fmt"
-	"github.com/eight-corner/learngo/something"
-)
+import "fmt"
+
+func multiply(a int, b int) int {
+	return a * b
+}
 
 func main() {
-	fmt.Println("Hello World")
-	something.SayHello()
+	fmt.Println(multiply(10, 2))
 }
