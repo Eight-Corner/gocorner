@@ -1,0 +1,2 @@
+# gocorner
+Learning Go Lang 
