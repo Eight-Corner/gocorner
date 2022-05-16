@@ -2,10 +2,12 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
+	"strconv"
 )
 
-func getUser(c *gin.Context) {
-	if err != nil {
+func GetUser(c *gin.Context) {
+	userNo, err := strconv.ParseUint(c.Param("user_no"), 10, 64)
+	if err != nil || userNo == 0 {
 		c.JSON(200, gin.H{"code": 400, "msg": "fail"})
 		return
 	}

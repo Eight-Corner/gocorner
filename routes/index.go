@@ -6,14 +6,16 @@ import (
 	"log"
 )
 
-func SetupRouter(engine *gin.Engine)  {
+func SetupRouter(engine *gin.Engine) {
 	if err := engine.SetTrustedProxies(nil); err != nil {
 		log.Fatal(err)
 	}
 
-	api := engine.Group("/api") {
-		user := api.Group("/user") {
-			user.GET("/user", controller.getUser)
+	api := engine.Group("/api")
+	{
+		user := api.Group("/user")
+		{
+			user.GET("/user", controller.GetUser)
 		}
 	}
 
