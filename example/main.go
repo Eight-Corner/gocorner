@@ -66,6 +66,8 @@ func canIdrink(age int) bool {
 }
 
 func main() {
-	fmt.Println(canIdrink(18))
-
+	a := 2
+	b := &a
+	*b = 25
+	fmt.Println(a, &b, b)
 }
