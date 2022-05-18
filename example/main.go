@@ -65,11 +65,18 @@ func canIdrink(age int) bool {
 
 }
 
+type user struct {
+	name   string
+	age    int
+	skills []string
+}
+
 func main() {
-	corner := map[string]string{"name": "corner", "age": "28"}
-	for _, value := range corner {
-		fmt.Println(value)
+	skils := []string{"vue", "nuxt", "go", "java", "spring", "nodejs"}
+	corner := user{
+		name:   "corner",
+		age:    28,
+		skills: skils,
 	}
 	fmt.Println(corner)
-
 }
