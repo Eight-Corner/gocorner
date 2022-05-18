@@ -66,8 +66,10 @@ func canIdrink(age int) bool {
 }
 
 func main() {
-	arr := []string{"name", "age", "phoneNumber"}
-	arr = append(arr, "chiki")
-	fmt.Println(arr)
+	corner := map[string]string{"name": "corner", "age": "28"}
+	for _, value := range corner {
+		fmt.Println(value)
+	}
+	fmt.Println(corner)
 
 }
